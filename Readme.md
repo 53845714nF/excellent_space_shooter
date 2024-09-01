@@ -1,10 +1,14 @@
 # Excellent Space Shooter
 
+<img src="img/game.png" alt="A Screenshot of the Excellent Space Shooter. You can see comic-like 2D spaceships shooting lasers. At the top are levels, lives and a score." style="width:60%;">
+
 ## Description
+
 This is a simple 2D space shooter created using the Pygame library in Python.
 The objective of the game is to survive as long as possible and defeat as many enemies as possible.
 
 ## System Requirements
+
 To run the game, you will need Python 3 and the Pygame library installed.
 If you don't have Pygame installed, you can install it using pip:
 ```bash
@@ -12,11 +16,13 @@ pip3 install pygame
 ```
 
 ## How to Play
+
 To start the game, run the main.py file.
 Use the arrow keys or WASD to move your ship and the space to fire your laser.
 Avoid enemy fire and increase your score.
 
 ## Assets and Tutorials
+
 Thanks to Kenney.nl for Space Shooter Redux
 (https://opengameart.org/content/space-shooter-redux)
 
