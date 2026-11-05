@@ -4,7 +4,7 @@ This Modul contains the Level class.
 from math import ceil
 from pygame.image import load
 from pygame.transform import scale
-
+from paths import asset_path
 
 class Level:
     """
@@ -37,20 +37,16 @@ class Level:
 
     def map_background(self):
         """
-        Maps the level number to right image.
+        Maps the level number to the right image.
         """
-        img = 'assets/backgrounds/'
-        if self.number == 0:
-            img += 'black'
-        elif self.number == 1:
-            img += 'black'
-        elif self.number == 2:
-            img += 'blue'
-        elif self.number == 3:
-            img += 'purple'
-        elif self.number == 4:
-            img += 'darkPurple'
-        else:
-            img += 'black'
+        backgrounds = {
+            0: "black",
+            1: "black",
+            2: "blue",
+            3: "purple",
+            4: "darkPurple"
+        }
 
-        return img + '.png'
+        filename = backgrounds.get(self.number, "black")
+
+        return asset_path("backgrounds", filename + ".png")

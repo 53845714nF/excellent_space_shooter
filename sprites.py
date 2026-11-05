@@ -7,15 +7,15 @@ https://stackoverflow.com/questions/45526988/does-anyone-have-an-example-of-usin
 from xml.etree import ElementTree
 from pygame import Rect
 from pygame.image import load
-
+from paths import asset_path
 
 class Sheet:
     """
     Sheet class allow an easy asses to the assets sheet.
     """
     def __init__(self):
-        self.spritesheet = load('assets/sheet.png').convert_alpha()
-        tree = ElementTree.parse('assets/sheet.xml')
+        self.spritesheet = load(asset_path("sheet.png")).convert_alpha()
+        tree = ElementTree.parse(asset_path("sheet.xml"))
 
         self.map = {}
         for node in tree.iter():

@@ -5,7 +5,7 @@ from pygame.mask import from_surface
 from pygame.mixer import Sound
 from laser import Laser
 from sprites import Sheet
-
+from paths import asset_path
 
 class Ship:
     """
@@ -24,7 +24,7 @@ class Ship:
         self.mask = from_surface(self.img)
         self.shots = []
         self.shoot_delay_counter = 0
-        self.lost_live_sound = Sound('assets/sounds/sfx_shieldDown.ogg')
+        self.lost_live_sound = Sound(asset_path("sounds", "sfx_shieldDown.ogg"))
 
     def draw(self, screen):
         """

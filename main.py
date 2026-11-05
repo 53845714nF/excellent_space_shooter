@@ -10,6 +10,7 @@ from pygame.font import Font
 from enemy_manager import EnemyManager
 from player import Player
 from level import Level
+from paths import asset_path
 
 # Pygame init stuff
 size = width, height = 750, 750
@@ -19,11 +20,11 @@ font_init()
 mixer_init()
 
 # Fonts
-future_thin_font = Font('assets/fonts/kenvector_future_thin.ttf', 30)
-future_font = Font('assets/fonts/kenvector_future.ttf', 60)
+future_thin_font = Font(asset_path("fonts", "kenvector_future_thin.ttf"), 30)
+future_font = Font(asset_path("fonts", "kenvector_future.ttf"), 60)
 
 # Music
-music = Sound('assets/sounds/space_half.mp3')
+music = Sound(asset_path("sounds", "space_half.mp3"))
 music.set_volume(0.2)
 music.play()
 

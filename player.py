@@ -6,6 +6,7 @@ from pygame import K_w, K_a, K_s, K_d, K_SPACE, K_UP, K_DOWN, K_LEFT, K_RIGHT
 from pygame.key import get_pressed
 from pygame.mixer import Sound
 from ship import Ship
+from paths import asset_path
 
 
 class Player(Ship):
@@ -16,7 +17,7 @@ class Player(Ship):
     def __init__(self, x_position, y_position, img, laser_img='laserRed01', live=4, speed=6):
         super().__init__(x_position, y_position, img, laser_img, live, speed)
         self.score = 0
-        self.shoot_sound = Sound('assets/sounds/sfx_laser2.ogg')
+        self.shoot_sound = Sound(asset_path("sounds", "sfx_laser2.ogg"))
 
     def movement(self, screen):
         """
