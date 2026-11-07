@@ -50,3 +50,17 @@ class Sheet:
         rect = Rect(self.map[name]['x'], self.map[name]['y'],
                     self.map[name]['width'], self.map[name]['height'])
         return self.spritesheet.subsurface(rect)
+
+
+_shared_sheet = None
+
+
+def get_sheet():
+    """
+    Returns a shared singleton Sheet instance.
+    """
+    global _shared_sheet
+    if _shared_sheet is None:
+        _shared_sheet = Sheet()
+    return _shared_sheet
+
